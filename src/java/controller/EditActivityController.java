@@ -31,7 +31,7 @@ public class EditActivityController extends HttpServlet {
             String dayOfWeek = request.getParameter("dayOfWeek");
             String startTime = request.getParameter("startTime");
 
-            Activity activity = new Activity(activityId, userId, activityName, dayOfWeek, start);
+            Activity activity = new Activity(activityId, userId, activityName, dayOfWeek, startTime);
             activityDAO.updateActivity(activity);
             response.sendRedirect("schedule");
         } catch (NumberFormatException e) {
