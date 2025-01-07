@@ -118,7 +118,7 @@
                 <button type="submit" name="action" value="addActivity">Tambahkan Aktivitas</button>
             </form>
             <% } else { %>
-            <p>Topik telah dimulai. Kembali ke jadwal untuk mengulang topik</p>
+                <p>Topik telah dimulai. Kembali ke jadwal untuk mengulang topik</p>
             <% } %>
 
 
