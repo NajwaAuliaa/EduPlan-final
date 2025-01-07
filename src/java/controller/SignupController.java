@@ -21,8 +21,7 @@ public class SignupController extends HttpServlet {
 
         try {
             if (userDAO.emailExists(email)) {
-                request.setAttribute("error", "Email sudah terdaftar. Silakan gunakan email lain.");
-                request.getRequestDispatcher("emailExist.jsp").forward(request, response);
+                response.sendRedirect("emailExist.jsp?error=Email sudah terdaftar. Silakan gunakan email lain.");
             } else {
                 User user = new User();
                 user.setEmail(email);
