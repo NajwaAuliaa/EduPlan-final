@@ -93,13 +93,13 @@
         <h1>Checklist Mode</h1>
 
         <div class="container">
-            <!-- Timer display -->
+            <!-- Display Timernya -->
             <div class="timer" id="timer-display">00:00</div>
 
-            <!-- Status message -->
+            <!-- Display Status -->
             <div class="status" id="status-display"></div>
 
-            <!-- Form to input new activity -->
+            <!-- Form buat input topik -->
             <%
                 Boolean activitiesStarted = (Boolean) session.getAttribute("activitiesStarted");
                 if (activitiesStarted == null) {
@@ -122,7 +122,7 @@
             <% } %>
 
 
-            <!-- List of Activities -->
+            <!-- List Topik -->
             <h2>Daftar Topik</h2>
             <div class="activity-list">
                 <form method="post" action="checklist">
@@ -145,7 +145,6 @@
                 </form>
             </div>
 
-            <!-- Back to Schedule button -->
             <a href="checklist?action=clearAndRedirect" id="backToSchedule"><i class="fas fa-arrow-left icon"></i>Kembali ke Jadwal</a>
 
         </div>
@@ -153,7 +152,6 @@
         <script>
             let timeLeft = 0;
             let timerRunning = false;
-
 
             function updateTimerDisplay() {
                 const minutes = Math.floor(timeLeft / 60);
