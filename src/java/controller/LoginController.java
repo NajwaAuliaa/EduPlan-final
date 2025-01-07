@@ -28,8 +28,7 @@ public class LoginController extends HttpServlet {
                 response.sendRedirect("invalidLogin.jsp?error=Invalid credentials");
             }
         } catch (SQLException e) {
-            request.setAttribute("error", "Terjadi kesalahan. Silakan coba lagi.");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            response.sendRedirect("login.jsp?error=Invalid credentials");
         }
     }
 }
