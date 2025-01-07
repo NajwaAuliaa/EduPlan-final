@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 
+
 @WebServlet("/addActivity")
 public class AddActivityController extends HttpServlet {
     private final IActivityDAO activityDAO = new ActivityDAO();
@@ -39,3 +40,4 @@ public class AddActivityController extends HttpServlet {
         }
     }
 }
+
