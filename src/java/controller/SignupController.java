@@ -31,8 +31,7 @@ public class SignupController extends HttpServlet {
                 response.sendRedirect("login.jsp"); 
             }
         } catch (SQLException e) {
-            request.setAttribute("error", "Terjadi kesalahan. Silakan coba lagi.");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            response.sendRedirect("login.jsp?error=Something Wrong Happened.");
         }
     }
 }
