@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
@@ -26,8 +27,9 @@ public class LoginController extends HttpServlet {
             } else {
                 response.sendRedirect("invalidLogin.jsp?error=Invalid credentials");
             }
-        } catch (Exception e) {
-            throw new ServletException("Error during login", e);
+        } catch (SQLException e) {
+            request.setAttribute("error", "Terjadi kesalahan. Silakan coba lagi.");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }
 }
