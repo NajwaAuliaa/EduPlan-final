@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
+
 @WebServlet("/schedule")
 public class ScheduleController extends HttpServlet {
     private final ActivityDAO activityDAO = new ActivityDAO();
