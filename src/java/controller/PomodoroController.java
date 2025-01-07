@@ -64,7 +64,7 @@ public class PomodoroController extends HttpServlet {
                 session.setAttribute("currentIntervalTime", currentIntervalTime);
 
                 status = isBreak ? "Break Time" : "Focus Time";
-                session.setAttribute("status", );
+                session.setAttribute("status", status);
             }
         }
 
