@@ -99,7 +99,7 @@
 
             <button type="submit"><i class="fas fa-save icon"></i>Pembaruan Aktivitas</button>
         </form>
-        <a href="schedule"><i class="fas fa-arrow-left icon"></i>Kembali ke Jadwal</a>
+        <a href="schedule"><i class="fas fa-arrow-left icon"></i>Kembali ke </a>
     </div>
 </body>
 </html>
