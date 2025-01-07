@@ -124,7 +124,7 @@
                 xhr.send();
             }
 
-            setInterval(fetchTimerUpdate, 1000);
+            setInterval(fetchTimerUpdate, 100);
         </script>
 
     </body>
